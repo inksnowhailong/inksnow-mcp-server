@@ -1,4 +1,4 @@
-# Inksnow MCP Server
+# Inksnow MCP Proxy
 
 这是一个用于 Cursor IDE 的 MCP (Model Control Protocol) 代理服务器，可以将 Cursor 的 MCP 请求代理到您自己的服务器。
 
