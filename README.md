@@ -57,9 +57,10 @@ export DEBUG=1  # Linux/Mac
 {
   "mcp": {
     "command": "npx inksnow-mcp-proxy",
-    "args": ["http://your-server.com:3000"],
+    "args": ["http://your-server.com"],
     "env": {
-      "MCP_SERVER_URL": "http://your-server.com:3000"
+      "MCP_SERVER_URL": "http://your-server.com",
+      "DEBUG": "1"
     }
   }
 }
@@ -73,22 +74,13 @@ export DEBUG=1  # Linux/Mac
 ### 完整配置示例
 
 ```json
-{
-  "editor": {
-    "fontSize": 14,
-    "fontFamily": "JetBrains Mono"
-  },
-  "ai": {
-    "enabled": true,
-    "mcp": {
-      "command": "npx inksnow-mcp-proxy",
-      "args": ["http://localhost:3000"],
-      "env": {
-        "MCP_SERVER_URL": "http://localhost:3000"
+ "mcpServers": {
+      "HLMcp": {
+        "command": "npx",
+        "args": ["inksnow-mcp-proxy"],
+        "env": {}
       }
-    }
-  }
-}
+ }
 ```
 
 ## 协议说明
@@ -115,19 +107,6 @@ export DEBUG=1  # Linux/Mac
 4. 防火墙设置是否允许连接
 5. 如需调试详细日志，设置环境变量 `DEBUG=1`
 
-## 开发
-
-### 构建
-
-```bash
-npm run build
-```
-
-### 开发模式
-
-```bash
-npm run dev
-```
 
 ## 许可证
 
