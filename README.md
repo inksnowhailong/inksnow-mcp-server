@@ -11,7 +11,7 @@
 ## 安装
 
 ```bash
-npm install -g inksnow-mcp-server
+npm install -g inksnow-mcp-proxy
 ```
 
 ## 使用方法
@@ -19,18 +19,18 @@ npm install -g inksnow-mcp-server
 ### 命令行方式
 
 ```bash
-npx inksnow-mcp-server <server-url>
+npx inksnow-mcp-proxy <server-url>
 ```
 
 例如：
 ```bash
-npx inksnow-mcp-server http://localhost:3000
+npx inksnow-mcp-proxy http://localhost:3000
 ```
 
 ### 环境变量方式
 
 ```bash
-MCP_SERVER_URL=http://localhost:3000 npx inksnow-mcp-server
+MCP_SERVER_URL=http://localhost:3000 npx inksnow-mcp-proxy
 ```
 
 ### 日志调试
@@ -56,7 +56,7 @@ export DEBUG=1  # Linux/Mac
 ```json
 {
   "mcp": {
-    "command": "npx inksnow-mcp-server",
+    "command": "npx inksnow-mcp-proxy",
     "args": ["http://your-server.com:3000"],
     "env": {
       "MCP_SERVER_URL": "http://your-server.com:3000"
@@ -66,7 +66,7 @@ export DEBUG=1  # Linux/Mac
 ```
 
 ### 配置说明
-- `command`: 启动命令，使用 `npx inksnow-mcp-server`
+- `command`: 启动命令，使用 `npx inksnow-mcp-proxy`
 - `args`: 命令行参数，指定目标服务器 URL
 - `env`: 环境变量配置，可以在这里设置 `MCP_SERVER_URL`
 
@@ -81,7 +81,7 @@ export DEBUG=1  # Linux/Mac
   "ai": {
     "enabled": true,
     "mcp": {
-      "command": "npx inksnow-mcp-server",
+      "command": "npx inksnow-mcp-proxy",
       "args": ["http://localhost:3000"],
       "env": {
         "MCP_SERVER_URL": "http://localhost:3000"

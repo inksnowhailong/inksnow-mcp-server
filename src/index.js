@@ -205,7 +205,7 @@ class McpRemoteProxy {
                 prompts: {},
               },
               serverInfo: {
-                name: "inksnow-mcp-server",
+                name: "inksnow-mcp-proxy",
                 version: "1.0.0",
               },
             },
@@ -330,7 +330,7 @@ async function startProxy() {
 
   if (!serverUrl) {
     Logger.error("未指定服务器URL");
-    console.info("使用方法: npx inksnow-mcp-server [serverUrl]");
+    console.info("使用方法: npx inksnow-mcp-proxy [serverUrl]");
     console.info("或设置环境变量 MCP_SERVER_URL");
     process.exit(1);
   }

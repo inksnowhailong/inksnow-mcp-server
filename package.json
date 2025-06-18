@@ -1,6 +1,6 @@
 {
   "name": "inksnow-mcp-proxy",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "为提供HLMcp服务的npx代理服务,例如可配置于cursor的mcp配置中",
   "type": "module",
   "main": "dist/index.js",
